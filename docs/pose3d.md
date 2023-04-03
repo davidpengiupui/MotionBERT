@@ -17,26 +17,19 @@
 **Train from scratch:**
 
 ```bash
-python train.py \
---config configs/pose3d/MB_train_h36m.yaml \
---checkpoint checkpoint/pose3d/MB_train_h36m
+python train.py --config configs/pose3d/MB_train_h36m.yaml --checkpoint checkpoint/pose3d/MB_train_h36m
 ```
 
 **Finetune from pretrained MotionBERT:**
 
 ```bash
-python train.py \
---config configs/pose3d/MB_ft_h36m.yaml \
---pretrained checkpoint/pretrain/MB_release \
---checkpoint checkpoint/pose3d/FT_MB_release_MB_ft_h36m
+python train.py --config configs/pose3d/MB_ft_h36m.yaml --pretrained checkpoint/pretrain/MB_release --checkpoint checkpoint/pose3d/FT_MB_release_MB_ft_h36m
 ```
 
 **Evaluate:**
 
 ```bash
-python train.py \
---config configs/pose3d/MB_train_h36m.yaml \
---evaluate checkpoint/pose3d/MB_train_h36m/best_epoch.bin         
+python train.py --config configs/pose3d/MB_train_h36m.yaml --evaluate checkpoint/pose3d/MB_train_h36m/best_epoch.bin         
 ```
 
 
